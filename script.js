@@ -1,14 +1,26 @@
 // Your JS goes here
 var checkerboard = function (){
   for (var i = 0; i < 72; i++) {
-    var getHex ='#' + Math.random().toString(16).slice(2, 8);
     var square = document.createElement('div');
+    var r = 163 + i;
+    var g = 220 + i;
+    var b = 240 + i;
+    var r2 = 7 + (3 * i);
+    var g2 = 7 + (3 * i);
+    var b2 = 242 + (3 * i);
+    var getHex = 'rgb(' + r + ',' + g + ',' + b +')';
+    var getHex2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 +')';
 
     square.className = 'square';
     square.style.width = '11.1%';
     square.style.float = 'left';
     square.style.paddingBottom = '11.1%';
+
+    if (i % 2) {
     square.style.backgroundColor = (getHex);
+    } else {
+    square.style.backgroundColor = (getHex2);
+    }
 
     document.getElementsByClassName('div');
     document.body.appendChild(square);
@@ -16,55 +28,3 @@ var checkerboard = function (){
 }
 
 checkerboard();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//
-// var redBlack = function(){
-//   // var square = document.createElement('div');
-//   // square.className = 'square';
-//
-//   for (var i = 0; i < 70; i++) {
-//     if (i % 2) {
-//     square.style.color="red"
-//   }else{
-//     square.style.color="red"
-//   }
-//     document.getElementsByClassName('square');
-//     div.appendChild('div')[i];
-//   }
-//
-// }
-//
-// redBlack();
